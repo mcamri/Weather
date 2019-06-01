@@ -10,3 +10,4 @@ import Foundation
 
 let URL_FORECAST = "https://api.openweathermap.org"
 let APP_ID = "698d06c82c081694dce08dc7bb6bde74"
+let URL_ICON = "https://openweathermap.org/img/w/"

@@ -30,6 +30,8 @@
 		C161781322A2B1F9005E2AF5 /* ConstAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161781222A2B1F9005E2AF5 /* ConstAPI.swift */; };
 		C161781522A2B33A005E2AF5 /* NativeForecastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161781422A2B33A005E2AF5 /* NativeForecastAPI.swift */; };
 		C161781722A2B511005E2AF5 /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161781622A2B511005E2AF5 /* ForecastViewModel.swift */; };
+		C161781922A2C471005E2AF5 /* ForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161781822A2C471005E2AF5 /* ForecastCollectionViewCell.swift */; };
+		C161781B22A2DB29005E2AF5 /* SelectCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C161781A22A2DB29005E2AF5 /* SelectCityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		C161781222A2B1F9005E2AF5 /* ConstAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstAPI.swift; sourceTree = "<group>"; };
 		C161781422A2B33A005E2AF5 /* NativeForecastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeForecastAPI.swift; sourceTree = "<group>"; };
 		C161781622A2B511005E2AF5 /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
+		C161781822A2C471005E2AF5 /* ForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionViewCell.swift; sourceTree = "<group>"; };
+		C161781A22A2DB29005E2AF5 /* SelectCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 		C16177F022A2A661005E2AF5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C161781822A2C471005E2AF5 /* ForecastCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C16177CE22A2A619005E2AF5 /* ForecastViewController.swift */,
+				C161781A22A2DB29005E2AF5 /* SelectCityViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 				C161781322A2B1F9005E2AF5 /* ConstAPI.swift in Sources */,
 				C161781722A2B511005E2AF5 /* ForecastViewModel.swift in Sources */,
 				C161780722A2AEE0005E2AF5 /* Main.swift in Sources */,
+				C161781B22A2DB29005E2AF5 /* SelectCityViewController.swift in Sources */,
 				C16177FA22A2A797005E2AF5 /* MainCoordinator.swift in Sources */,
 				C161780922A2AFCB005E2AF5 /* ForecastItem.swift in Sources */,
 				C16177F622A2A747005E2AF5 /* Storyboarded.swift in Sources */,
@@ -322,6 +329,7 @@
 				C161781122A2B1D1005E2AF5 /* ForecastAPI.swift in Sources */,
 				C16177CD22A2A619005E2AF5 /* AppDelegate.swift in Sources */,
 				C161781522A2B33A005E2AF5 /* NativeForecastAPI.swift in Sources */,
+				C161781922A2C471005E2AF5 /* ForecastCollectionViewCell.swift in Sources */,
 				C161780122A2AE17005E2AF5 /* Wind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
