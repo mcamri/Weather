@@ -14,6 +14,7 @@ import UIKit
 class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     var children = [Coordinator]()
     var nav: UINavigationController
+    var cityId = "524901"
     
     init(nav: UINavigationController) {
         self.nav = nav
@@ -21,19 +22,18 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
     func start() {
         nav.delegate = self
-        
         let vc = ForecastViewController.instantiate()
         vc.coordinator = self
+        vc.cityId = cityId
         vc.forecastAPI = NativeForecastAPI()
         self.nav.pushViewController(vc, animated: true)
     }
     
-    func buy(_ selectedProduct:Int) {
-       
-    }
-    
-    func createAccount() {
-       
+    func selectCity() {
+        let vc = SelectCityViewController.instantiate()
+        vc.coordinator = self
+        vc.cityStore = JSONCityStore()
+        self.nav.pushViewController(vc, animated: true)
     }
     
     func childDidFinish(_ child:Coordinator) {
@@ -54,8 +54,11 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
             return
         }
         
-        if let vc = fromViewController as? ForecastViewController {
-            
+        if let vc = fromViewController as? SelectCityViewController {
+            self.cityId = vc.selectedCityId ?? self.cityId
+            let vc = self.nav.viewControllers.first as! ForecastViewController
+            vc.cityId = self.cityId
+            vc.reloadData()
         }
         
     }

@@ -13,6 +13,5 @@ struct City: Codable {
     var name:String?
     var coord:Coord?
     var country:String?
-    var timezone:Int
-    
+    var timezone:Int?
 }

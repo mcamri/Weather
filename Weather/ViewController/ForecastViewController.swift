@@ -13,6 +13,8 @@ class ForecastViewController: UIViewController, Storyboarded {
     var coordinator:MainCoordinator!
     var forecastAPI:ForecastAPI!
     var forecastViewModel:ForecastViewModel?
+    var cityId:String!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var itemCellSize: CGSize!
@@ -26,7 +28,14 @@ class ForecastViewController: UIViewController, Storyboarded {
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
-        forecastAPI.getForecast("524901"){
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "City", style: .plain, target: self, action: #selector(selectCity))
+        
+        self.reloadData()
+    }
+    
+    func reloadData() {
+        forecastAPI.getForecast(cityId){
             [weak self] viewModel in
             self?.forecastViewModel = viewModel
             DispatchQueue.main.async {
@@ -35,7 +44,10 @@ class ForecastViewController: UIViewController, Storyboarded {
         }
     }
     
-
+    @objc
+    func selectCity() {
+        coordinator.selectCity()
+    }
     
     func configureCell(_ cell:ForecastCollectionViewCell, _ indexPath:IndexPath){
         cell.cityLabel.text = forecastViewModel?.city(indexPath)
