@@ -79,6 +79,12 @@
 		C16177CB22A2A619005E2AF5 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				C16177F422A2A68F005E2AF5 /* ViewController */,
+				C16177F322A2A682005E2AF5 /* Network */,
+				C16177F222A2A675005E2AF5 /* Store */,
+				C16177F122A2A66D005E2AF5 /* ViewModel */,
+				C16177F022A2A661005E2AF5 /* View */,
+				C16177EF22A2A655005E2AF5 /* Coordinator */,
 				C16177CC22A2A619005E2AF5 /* AppDelegate.swift */,
 				C16177CE22A2A619005E2AF5 /* ViewController.swift */,
 				C16177D022A2A619005E2AF5 /* Main.storyboard */,
@@ -97,6 +103,48 @@
 				C16177E622A2A61C005E2AF5 /* Info.plist */,
 			);
 			path = WeatherTests;
+			sourceTree = "<group>";
+		};
+		C16177EF22A2A655005E2AF5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C16177F022A2A661005E2AF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C16177F122A2A66D005E2AF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C16177F222A2A675005E2AF5 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		C16177F322A2A682005E2AF5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C16177F422A2A68F005E2AF5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
