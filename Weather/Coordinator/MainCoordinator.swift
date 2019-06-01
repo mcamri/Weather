@@ -21,8 +21,10 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
     func start() {
         nav.delegate = self
+        
         let vc = ForecastViewController.instantiate()
         vc.coordinator = self
+        vc.forecastAPI = NativeForecastAPI()
         self.nav.pushViewController(vc, animated: true)
     }
     
